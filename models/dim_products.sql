@@ -1,4 +1,4 @@
-{{config(materialized='table')}}
+{{config(materialized='table', tag='tag1')}}
 
 select productid, productname, round(quantity) as rounded_price
-from raw_data.Products
+from {{source('RAW_DATA','products')}}
