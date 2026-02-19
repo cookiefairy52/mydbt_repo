@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: RAW_DATA 
+    database: DB
+    schema: RAW_DATA
+    tables:
+      - name: products
+        
+              
+      - name: COUSTOMERS
+      - name: ORDERS
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "Primary key for this table"
+        tests:
+          - check_negative_value
+          - unique
+          - not_null
+         
+
+  - name: my_second_dbt-model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "Primary key for this table"
+        tests:
+          - unique
+          - not_null
+  
+  
+
+          
+          
